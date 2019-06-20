@@ -1,0 +1,25 @@
+{
+  "name": "liri-node-app",
+  "version": "1111.123.566",
+  "description": "This is my Liri node.js",
+  "main": "game.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdamSL394/liri-node-app.git"
+  },
+  "author": "Adam Lehrer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AdamSL394/liri-node-app/issues"
+  },
+  "homepage": "https://github.com/AdamSL394/liri-node-app#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "inquirer": "^6.3.1",
+    "moment": "^2.24.0",
+    "node-spotify-api": "^1.1.1"
+  }
+}
