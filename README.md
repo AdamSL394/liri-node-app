@@ -37,4 +37,8 @@ The following will get up and running locally.
 Author
 Adam Lehrer
 
-![LIRI Node App](assets/Spotify.mp4)
+![LIRI Node App](assets/Concert.png)
+![LIRI Node App](assets/Do-what-it-says.png)
+![LIRI Node App](assets/Movie.png)
+![LIRI Node App](assets/Movie-noentry.png)
+![LIRI Node App](assets/Spotify.png)

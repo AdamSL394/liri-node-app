@@ -138,14 +138,18 @@ inquirer.prompt([
         artist = inquirerResponse.band
         console.log(inquirerResponse.band);
       }
-          console.log(artist)
+          // console.log(artist)
           var url = ("https://rest.bandsintown.com/artists/" + artist + "/events?app_id=6a1fc55c-04c4-4ddf-844f-e2ee23f4ceba&date=upcoming")
           axios.get(url).then(function (response) {
-            if (response.data[0].venue === undefined){
-              console.log("This movie dosen't exist ");
-            }else {
-            console.log(response.data[0].venue.name);
-            console.log(response.data[0].venue.city);
+            if (response.data[0] === undefined){
+              console.log("This artist dosen't have any upcoming shows! ");
+            }
+              else if(response.data[0].venue === undefined){
+                console.log("This artist dosen't have any upcoming shows! ");
+              }
+            else {
+            console.log("This artist is having a concert here : " +response.data[0].venue.name);
+            console.log("This artist is having a concert in this city : "+ response.data[0].venue.city);
             var datetime = (response.data[0].datetime).slice(0, 10);
             datetimeI = moment(datetime, "YYYY-MM-DD").format("MM/DD/YYYY");
             console.log("Event date: " + datetimeI);
@@ -202,10 +206,10 @@ function doIt() {
       var url = ("https://rest.bandsintown.com/artists/" + artist + "/events?app_id=6a1fc55c-04c4-4ddf-844f-e2ee23f4ceba&date=upcoming")
       axios.get(url).then(function (response) {
         if (response.data[0].venue === undefined){
-          console.log("This movie dosen't exist ");
+          console.log("This artist dosen't exist ");
         }else {
-        console.log("Asap Rocky is having a concert here : "+ response.data[0].venue.name);
-        console.log("Asap Rocky is having a concert in this city : " + response.data[0].venue.city);
+        console.log("This artist is having a concert here : "+ response.data[0].venue.name);
+        console.log("This artist is having a concert in this city : " + response.data[0].venue.city);
         var datetime = (response.data[0].datetime).slice(0, 10);
         datetimeI = moment(datetime, "YYYY-MM-DD").format("MM/DD/YYYY");
         console.log("Event date: " + datetimeI);
